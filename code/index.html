@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://d3js.org/d3.v6.min.js"></script>
+    <script src="d3-sparql/d3-sparql.js"></script>
+    <script>
+        var endpointURL = "http://127.0.0.1:3030/rym_onto/sparql"
+    </script>
+    <script>
+    </script>
+</head>
+
+<body style="width: 100vw; height: 100vh; margin: 0px; padding: 0px;">
+
+    <div style="height: 100%; width: 100%; display: flex; flex-direction: row;">
+
+        <div id="list" style="width: 30%; display: flex; flex-direction: column; overflow-y: scroll;">
+            <script src="list.js"></script>
+            <script>load_list()</script>
+
+        </div>
+
+        <div style="width:70%; display: flex; flex-direction: column; padding: 0% 5%;">
+
+            <div id="details" style="height: 50%;">
+                <script src="details.js"></script>
+                <div style="width: 50%;">
+                    <h2 id="name"></h2>
+                    <p id="genres"> </p>
+                </div>
+                <div style="width: 50%;">
+                    <img>
+                </div>
+                <script> load_details("Kendrick Lamar", "To Pimp a Butterfly")</script>
+
+            </div>
+
+            <div id="histo" style="height: 50%;">
+                <script src="histo.js"></script>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
